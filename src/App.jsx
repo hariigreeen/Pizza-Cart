@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import NavBar from './components/navBar';
+import NavBar from './components/NavBar';
+
 import { Outlet } from 'react-router-dom';
 import Cart from './features/Cart/Cart';
 
