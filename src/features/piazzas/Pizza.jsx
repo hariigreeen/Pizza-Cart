@@ -4,11 +4,13 @@ import { addToCart } from '../../slices/cartSlice';
 
 const Pizza = ({ pizza }) => {
     const [thisPizza, setThisPizza] = useState(pizza)
+    const [selectedOption, setSelectedOption] = useState(Object.keys(pizza.sizeandcrust[0])[0])
     const dispatch = useDispatch();
     const addPizza = (pizza) => {
-        dispatch(addToCart(pizza))
+        // dispatch(addToCart(pizza))
+        dispatch(addToCart({ ...pizza, selectedOption }))
     }
-    const updatePrice = (e) => {
+    /* const updatePrice = (e) => {
         //console.log(e.target.value)
         //thisPizza.price = e.target.value;
 
@@ -19,6 +21,17 @@ const Pizza = ({ pizza }) => {
             price: newPrice // Update only the price
         }));
 
+    } */
+    const updatePrice = (e) => {
+        const selectedOpt = e.target.selectedOptions[0].text; // Get selected option text
+        const newPrice = parseFloat(e.target.value); // Get the new price
+
+        setThisPizza((prevPizza) => ({
+            ...prevPizza,  // Spread previous pizza properties
+            price: newPrice // Update only the price
+        }));
+
+        setSelectedOption(selectedOpt); // Store selected option name
     }
     return (
         <>

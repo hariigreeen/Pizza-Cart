@@ -14,7 +14,10 @@ const Cart = () => {
 
                             <li className=' list-unstyled bg-white'>
                                 <div className=' d-flex justify-content-between p-2'>
-                                    <span>{item.name}</span>
+                                    <div>
+                                        <span>{item.name}</span><br />
+                                        <span style={{ fontSize: "12px" }} className=' bg-success text-white'>{item.selectedOption}</span>
+                                    </div>
                                     <b>₹ {item.price.toFixed(2)}</b>
                                 </div>
                             </li>
