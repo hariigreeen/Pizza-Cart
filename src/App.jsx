@@ -4,7 +4,7 @@ import './App.css'
 import NavBar from './components/NavBar';
 
 import { Outlet } from 'react-router-dom';
-import Cart from './features/Cart/Cart';
+import Cart from './features/cart/Cart';
 
 
 function App() {
