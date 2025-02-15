@@ -1,0 +1,7 @@
+
+@import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
+@import url('../node_modules/bootstrap-icons/font/bootstrap-icons.css');
+.nav-link:hover {
+    background-color: rgb(20, 53, 69);
+    color: white;
+}
